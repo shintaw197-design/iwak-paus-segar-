@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>IWAK PAUS STORE</title>
 
     <style>
@@ -14,72 +15,105 @@
         }
 
         body {
-            background: linear-gradient(#dff8ff, #8ed8f5, #d5f5ff);
-            color: #17445a;
+            background:
+                linear-gradient(rgba(0, 80, 120, 0.25),
+                rgba(0, 150, 190, 0.35)),
+                url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #16445a;
         }
 
         header {
-            background: #006994;
+            background: rgba(0, 65, 100, 0.90);
             color: white;
             text-align: center;
-            padding: 25px;
+            padding: 30px 15px;
         }
 
         header h1 {
-            font-size: 35px;
+            font-size: 38px;
+            letter-spacing: 2px;
         }
 
         header p {
-            margin-top: 8px;
+            margin-top: 10px;
+            font-size: 17px;
+        }
+
+        nav {
+            background: rgba(255,255,255,0.92);
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #006994;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #00a878;
         }
 
         .hero {
             text-align: center;
-            padding: 30px 20px;
+            padding: 45px 20px;
+            color: white;
         }
 
         .hero img {
             width: 90%;
-            max-width: 650px;
-            height: 300px;
+            max-width: 750px;
+            height: 350px;
             object-fit: cover;
-            border-radius: 25px;
-            box-shadow: 0 8px 20px #578b9c;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
         }
 
         .hero h2 {
-            margin-top: 20px;
-            color: #005477;
-            font-size: 28px;
+            margin-top: 25px;
+            font-size: 32px;
         }
 
         .hero p {
-            margin: 10px auto;
-            max-width: 650px;
-            font-size: 17px;
+            max-width: 700px;
+            margin: 12px auto;
+            font-size: 18px;
         }
 
         .promo {
             width: 90%;
-            max-width: 700px;
-            margin: auto;
-            padding: 20px;
+            max-width: 800px;
+            margin: 10px auto 35px;
+            background: #ffe17b;
+            color: #604700;
             text-align: center;
-            background: #ffd966;
-            border-radius: 15px;
-            font-size: 22px;
+            padding: 22px;
+            border-radius: 20px;
+            font-size: 23px;
             font-weight: bold;
-            color: #654900;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
         }
 
         .produk {
-            padding: 35px 20px;
-            text-align: center;
+            width: 95%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 10px;
         }
 
-        .produk h2 {
-            color: #005477;
-            margin-bottom: 25px;
+        .produk > h2 {
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            margin-bottom: 30px;
         }
 
         .container {
@@ -91,36 +125,55 @@
 
         .card {
             width: 280px;
-            background: white;
+            background: rgba(255,255,255,0.95);
+            border-radius: 22px;
             padding: 15px;
-            border-radius: 20px;
-            box-shadow: 0 6px 18px #6092a3;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.22);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
         }
 
         .card img {
             width: 100%;
             height: 190px;
             object-fit: cover;
-            border-radius: 15px;
+            border-radius: 17px;
         }
 
         .card h3 {
-            margin: 15px 0 8px;
             color: #006994;
+            margin: 15px 0 8px;
+            font-size: 21px;
         }
 
         .card p {
-            margin: 6px;
+            line-height: 1.5;
         }
 
         .harga-lama {
+            color: #888;
             text-decoration: line-through;
-            color: gray;
+            margin-top: 10px;
         }
 
         .harga {
-            color: #e05252;
-            font-size: 23px;
+            color: #e04f4f;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .diskon {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 13px;
             font-weight: bold;
         }
 
@@ -129,9 +182,9 @@
             background: #00a878;
             color: white;
             text-decoration: none;
-            padding: 12px;
-            border-radius: 10px;
+            padding: 13px;
             margin-top: 15px;
+            border-radius: 12px;
             font-weight: bold;
         }
 
@@ -139,55 +192,99 @@
             background: #007d5c;
         }
 
-        .keunggulan {
+        .tentang {
             width: 90%;
-            max-width: 800px;
-            margin: 10px auto 35px;
-            padding: 25px;
-            background: white;
-            border-radius: 20px;
+            max-width: 850px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.94);
+            padding: 30px;
+            border-radius: 25px;
             text-align: center;
-            box-shadow: 0 5px 15px #6092a3;
+            box-shadow: 0 7px 20px rgba(0,0,0,0.2);
         }
 
-        .keunggulan h2 {
-            color: #005477;
+        .tentang h2 {
+            color: #006994;
             margin-bottom: 15px;
         }
 
-        .keunggulan p {
-            margin: 8px;
+        .tentang p {
+            line-height: 1.7;
         }
 
         footer {
-            background: #005477;
+            background: rgba(0, 60, 90, 0.95);
             color: white;
             text-align: center;
-            padding: 25px;
+            padding: 30px 15px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-top: 8px;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .hero h2 {
+                font-size: 25px;
+            }
+
+            .hero img {
+                height: 240px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
+
 
 <body>
 
     <!-- HEADER -->
     <header>
+
         <h1>🐋 IWAK PAUS STORE 🐋</h1>
-        <p>Produk unik bertema iwak paus untuk kamu!</p>
+
+        <p>
+            Jelajahi dunia iwak paus dengan koleksi
+            yang unik dan aesthetic 🌊
+        </p>
+
     </header>
 
 
-    <!-- HERO -->
-    <section class="hero">
+    <!-- NAVBAR -->
+    <nav>
 
-        <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=1000&q=80"
-             alt="Iwak Paus">
+        <a href="#home">HOME</a>
+        <a href="#produk">PRODUK</a>
+        <a href="#tentang">TENTANG</a>
+        <a href="#kontak">KONTAK</a>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <img
+            src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=1200&q=80"
+            alt="Iwak Paus">
 
         <h2>Selamat Datang di IWAK PAUS 🌊</h2>
 
         <p>
-            Temukan berbagai produk bertema iwak paus
-            dengan desain unik, menarik, dan aesthetic.
+            Temukan berbagai produk bertema jenis-jenis
+            iwak paus dengan harga terjangkau.
         </p>
 
     </section>
@@ -195,80 +292,217 @@
 
     <!-- PROMO -->
     <div class="promo">
-        🎉 PROMO SPESIAL IWAK PAUS 🎉
+
+        🎉 PROMO SPESIAL 🎉
+
         <br>
-        DISKON 10% UNTUK SEMUA PRODUK!
+
+        🔥 DISKON 10% SEMUA PRODUK 🔥
+
+        <br>
+
+        <small>
+            Harga promo sudah tertera pada setiap produk!
+        </small>
+
     </div>
 
 
     <!-- PRODUK -->
-    <section class="produk">
+    <section class="produk" id="produk">
 
-        <h2>🌊 PRODUK IWAK PAUS 🌊</h2>
+        <h2>🐋 JENIS IWAK PAUS 🐋</h2>
 
         <div class="container">
 
-            <!-- PRODUK 1 -->
+
+            <!-- BLUE WHALE -->
             <div class="card">
 
-                <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=600&q=80"
-                     alt="Kaos Iwak Paus">
+                <img
+                    src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=700&q=80"
+                    alt="Blue Whale">
 
-                <h3>🐋 Kaos Iwak Paus</h3>
+                <h3>🐋 Blue Whale</h3>
 
-                <p>Kaos dengan desain iwak paus yang keren dan aesthetic.</p>
+                <span class="diskon">DISKON 10%</span>
 
-                <p class="harga-lama">Rp150.000</p>
+                <p>
+                    Blue Whale atau paus biru merupakan
+                    jenis paus terbesar di dunia.
+                </p>
 
-                <p class="harga">Rp135.000</p>
+                <p class="harga-lama">
+                    Rp150.000
+                </p>
+
+                <p class="harga">
+                    Rp135.000
+                </p>
 
                 <a class="btn"
-                   href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20checkout%20Kaos%20Iwak%20Paus">
-                    📱 CHECKOUT VIA WHATSAPP
+                    href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20checkout%20produk%20Blue%20Whale">
+                    📱 CHECKOUT WA
                 </a>
 
             </div>
 
 
-            <!-- PRODUK 2 -->
+            <!-- HUMPBACK -->
             <div class="card">
 
-                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80"
-                     alt="Tote Bag Iwak Paus">
+                <img
+                    src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?auto=format&fit=crop&w=700&q=80"
+                    alt="Humpback Whale">
 
-                <h3>🐋 Tote Bag Iwak Paus</h3>
+                <h3>🐋 Humpback Whale</h3>
 
-                <p>Tote bag dengan gambar iwak paus yang cocok digunakan sehari-hari.</p>
+                <span class="diskon">DISKON 10%</span>
 
-                <p class="harga-lama">Rp100.000</p>
+                <p>
+                    Humpback Whale atau paus bungkuk
+                    terkenal dengan aksi melompat dari air.
+                </p>
 
-                <p class="harga">Rp90.000</p>
+                <p class="harga-lama">
+                    Rp125.000
+                </p>
+
+                <p class="harga">
+                    Rp112.500
+                </p>
 
                 <a class="btn"
-                   href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20checkout%20Tote%20Bag%20Iwak%20Paus">
-                    📱 CHECKOUT VIA WHATSAPP
+                    href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20checkout%20produk%20Humpback%20Whale">
+                    📱 CHECKOUT WA
                 </a>
 
             </div>
 
 
-            <!-- PRODUK 3 -->
+            <!-- SPERM WHALE -->
             <div class="card">
 
-                <img src="https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&fit=crop&w=600&q=80"
-                     alt="Poster Iwak Paus">
+                <img
+                    src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=80"
+                    alt="Sperm Whale">
 
-                <h3>🐋 Poster Iwak Paus</h3>
+                <h3>🐋 Sperm Whale</h3>
 
-                <p>Poster aesthetic bertema iwak paus untuk dekorasi kamar.</p>
+                <span class="diskon">DISKON 10%</span>
 
-                <p class="harga-lama">Rp75.000</p>
+                <p>
+                    Sperm Whale atau paus sperma
+                    merupakan paus bergigi terbesar.
+                </p>
 
-                <p class="harga">Rp67.500</p>
+                <p class="harga-lama">
+                    Rp135.000
+                </p>
+
+                <p class="harga">
+                    Rp121.500
+                </p>
 
                 <a class="btn"
-                   href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20checkout%20Poster%20Iwak%20Paus">
-                    📱 CHECKOUT VIA WHATSAPP
+                    href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20checkout%20produk%20Sperm%20Whale">
+                    📱 CHECKOUT WA
+                </a>
+
+            </div>
+
+
+            <!-- FIN WHALE -->
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&fit=crop&w=700&q=80"
+                    alt="Fin Whale">
+
+                <h3>🐋 Fin Whale</h3>
+
+                <span class="diskon">DISKON 10%</span>
+
+                <p>
+                    Fin Whale atau paus sirip merupakan
+                    paus terbesar kedua setelah paus biru.
+                </p>
+
+                <p class="harga-lama">
+                    Rp140.000
+                </p>
+
+                <p class="harga">
+                    Rp126.000
+                </p>
+
+                <a class="btn"
+                    href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20checkout%20produk%20Fin%20Whale">
+                    📱 CHECKOUT WA
+                </a>
+
+            </div>
+
+
+            <!-- KILLER WHALE -->
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&w=700&q=80"
+                    alt="Killer Whale">
+
+                <h3>🐋 Killer Whale / Orca</h3>
+
+                <span class="diskon">DISKON 10%</span>
+
+                <p>
+                    Killer Whale atau orca merupakan
+                    predator laut yang sangat dikenal.
+                </p>
+
+                <p class="harga-lama">
+                    Rp160.000
+                </p>
+
+                <p class="harga">
+                    Rp144.000
+                </p>
+
+                <a class="btn"
+                    href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20checkout%20produk%20Killer%20Whale">
+                    📱 CHECKOUT WA
+                </a>
+
+            </div>
+
+
+            <!-- GRAY WHALE -->
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1518467166778-b88f373ffec7?auto=format&fit=crop&w=700&q=80"
+                    alt="Gray Whale">
+
+                <h3>🐋 Gray Whale</h3>
+
+                <span class="diskon">DISKON 10%</span>
+
+                <p>
+                    Gray Whale atau paus abu-abu
+                    merupakan salah satu jenis paus baleen.
+                </p>
+
+                <p class="harga-lama">
+                    Rp115.000
+                </p>
+
+                <p class="harga">
+                    Rp103.500
+                </p>
+
+                <a class="btn"
+                    href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20checkout%20produk%20Gray%20Whale">
+                    📱 CHECKOUT WA
                 </a>
 
             </div>
@@ -278,30 +512,58 @@
     </section>
 
 
-    <!-- KEUNGGULAN -->
-    <section class="keunggulan">
+    <!-- TENTANG -->
+    <section class="tentang" id="tentang">
 
-        <h2>🐋 Kenapa Memilih IWAK PAUS?</h2>
+        <h2>🌊 Tentang IWAK PAUS STORE</h2>
 
-        <p>🌊 Desain bertema laut yang aesthetic</p>
-        <p>🐋 Produk unik dan menarik</p>
-        <p>✨ Cocok untuk pecinta iwak paus</p>
-        <p>🎉 Promo diskon 10%</p>
-        <p>📱 Checkout mudah melalui WhatsApp</p>
+        <p>
+            IWAK PAUS STORE merupakan website sederhana
+            bertema kehidupan laut dan berbagai jenis
+            iwak paus. Website ini menyediakan koleksi
+            produk bertema paus dengan desain menarik
+            dan aesthetic.
+        </p>
+
+        <br>
+
+        <p>
+            🐋 Blue Whale &nbsp; | &nbsp;
+            🐋 Humpback Whale &nbsp; | &nbsp;
+            🐋 Sperm Whale
+        </p>
+
+        <p>
+            🐋 Fin Whale &nbsp; | &nbsp;
+            🐋 Killer Whale &nbsp; | &nbsp;
+            🐋 Gray Whale
+        </p>
 
     </section>
 
 
     <!-- FOOTER -->
-    <footer>
+    <footer id="kontak">
 
-        <h3>🐋 IWAK PAUS STORE 🐋</h3>
+        <h2>🐋 IWAK PAUS STORE 🐋</h2>
 
-        <p>📱 WhatsApp: 085707486044</p>
+        <p>
+            📱 WhatsApp: 085707486044
+        </p>
 
-        <p>© 2026 IWAK PAUS STORE</p>
+        <p>
+            Silakan klik tombol Checkout WA
+            untuk melakukan pemesanan.
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 IWAK PAUS STORE
+        </p>
 
     </footer>
 
 </body>
-</html>
+</html>                    
+                
