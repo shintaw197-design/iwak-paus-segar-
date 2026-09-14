@@ -1,1 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IWAK PAUS STORE</title>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(#dff8ff, #8ed8f5, #d5f5ff);
+            color: #17445a;
+        }
+
+        header {
+            background: #006994;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            font-size: 35px;
+        }
+
+        header p {
+            margin-top: 8px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .hero img {
+            width: 90%;
+            max-width: 650px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px #578b9c;
+        }
+
+        .hero h2 {
+            margin-top: 20px;
+            color: #005477;
+            font-size: 28px;
+        }
+
+        .hero p {
+            margin: 10px auto;
+            max-width: 650px;
+            font-size: 17px;
+        }
+
+        .promo {
+            width: 90%;
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            background: #ffd966;
+            border-radius: 15px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #654900;
+        }
+
+        .produk {
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .produk h2 {
+            color: #005477;
+            margin-bottom: 25px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 280px;
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 6px 18px #6092a3;
+        }
+
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .card h3 {
+            margin: 15px 0 8px;
+            color: #006994;
+        }
+
+        .card p {
+            margin: 6px;
+        }
+
+        .harga-lama {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .harga {
+            color: #e05252;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: block;
+            background: #00a878;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #007d5c;
+        }
+
+        .keunggulan {
+            width: 90%;
+            max-width: 800px;
+            margin: 10px auto 35px;
+            padding: 25px;
+            background: white;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px #6092a3;
+        }
+
+        .keunggulan h2 {
+            color: #005477;
+            margin-bottom: 15px;
+        }
+
+        .keunggulan p {
+            margin: 8px;
+        }
+
+        footer {
+            background: #005477;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>🐋 IWAK PAUS STORE 🐋</h1>
+        <p>Produk unik bertema iwak paus untuk kamu!</p>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=1000&q=80"
+             alt="Iwak Paus">
+
+        <h2>Selamat Datang di IWAK PAUS 🌊</h2>
+
+        <p>
+            Temukan berbagai produk bertema iwak paus
+            dengan desain unik, menarik, dan aesthetic.
+        </p>
+
+    </section>
+
+
+    <!-- PROMO -->
+    <div class="promo">
+        🎉 PROMO SPESIAL IWAK PAUS 🎉
+        <br>
+        DISKON 10% UNTUK SEMUA PRODUK!
+    </div>
+
+
+    <!-- PRODUK -->
+    <section class="produk">
+
+        <h2>🌊 PRODUK IWAK PAUS 🌊</h2>
+
+        <div class="container">
+
+            <!-- PRODUK 1 -->
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=600&q=80"
+                     alt="Kaos Iwak Paus">
+
+                <h3>🐋 Kaos Iwak Paus</h3>
+
+                <p>Kaos dengan desain iwak paus yang keren dan aesthetic.</p>
+
+                <p class="harga-lama">Rp150.000</p>
+
+                <p class="harga">Rp135.000</p>
+
+                <a class="btn"
+                   href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20checkout%20Kaos%20Iwak%20Paus">
+                    📱 CHECKOUT VIA WHATSAPP
+                </a>
+
+            </div>
+
+
+            <!-- PRODUK 2 -->
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80"
+                     alt="Tote Bag Iwak Paus">
+
+                <h3>🐋 Tote Bag Iwak Paus</h3>
+
+                <p>Tote bag dengan gambar iwak paus yang cocok digunakan sehari-hari.</p>
+
+                <p class="harga-lama">Rp100.000</p>
+
+                <p class="harga">Rp90.000</p>
+
+                <a class="btn"
+                   href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20checkout%20Tote%20Bag%20Iwak%20Paus">
+                    📱 CHECKOUT VIA WHATSAPP
+                </a>
+
+            </div>
+
+
+            <!-- PRODUK 3 -->
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&fit=crop&w=600&q=80"
+                     alt="Poster Iwak Paus">
+
+                <h3>🐋 Poster Iwak Paus</h3>
+
+                <p>Poster aesthetic bertema iwak paus untuk dekorasi kamar.</p>
+
+                <p class="harga-lama">Rp75.000</p>
+
+                <p class="harga">Rp67.500</p>
+
+                <a class="btn"
+                   href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20checkout%20Poster%20Iwak%20Paus">
+                    📱 CHECKOUT VIA WHATSAPP
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- KEUNGGULAN -->
+    <section class="keunggulan">
+
+        <h2>🐋 Kenapa Memilih IWAK PAUS?</h2>
+
+        <p>🌊 Desain bertema laut yang aesthetic</p>
+        <p>🐋 Produk unik dan menarik</p>
+        <p>✨ Cocok untuk pecinta iwak paus</p>
+        <p>🎉 Promo diskon 10%</p>
+        <p>📱 Checkout mudah melalui WhatsApp</p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>🐋 IWAK PAUS STORE 🐋</h3>
+
+        <p>📱 WhatsApp: 085707486044</p>
+
+        <p>© 2026 IWAK PAUS STORE</p>
+
+    </footer>
+
+</body>
+</html>
